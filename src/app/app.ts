@@ -13,4 +13,14 @@ export class App {
   Age = 23;
   Stream = "CSE";
   Tech_Stack = ".NET Full Stack";
+  isAdmin = true;
+
+  count = signal(0);
+
+  Increment(){
+    return this.count.update(value => value + 1);
+  }
+  Decrement(){
+    return this.count.update(value => value - 1);
+  }
 }
