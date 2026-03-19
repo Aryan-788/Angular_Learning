@@ -25,4 +25,26 @@ export class Events {
   Decrement(){
     this.count.update(v => v - 1);
   }
+
+  onKeyUp(event: any){
+    console.log(event);
+  }
+
+  onBlur(event: any){
+    console.log("Clicking Blur Event.");
+  }
+  onFocus(event: any){
+    console.log(event);
+    console.log("Clicking on On focus Event");
+  }
+
+  onHover(event: any){
+    console.log(event);
+    console.log("Clicking on On Hover Event");
+  }
+
+  onLeave(event: any){
+    console.log(event);
+    console.log("Clicking on On Leave Event");
+  }
 }

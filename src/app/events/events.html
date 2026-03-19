@@ -1,12 +1,24 @@
 <p>events works!</p>
 
-<p>Count: {{count()}}</p>
+<p>Count: {{ count() }}</p>
 <button (click)="Increment()">Increment</button>
 
 <button (click)="Decrement()">Decrement</button>
 
 <button (click)="showEvent($event)">Show Event</button>
 
-<br>
-<input (input)="updateUser($event.target.value)"/>
-<p>Your Name: {{username}}</p>
+<br />
+<input (input)="updateUser($event.target.value)" />
+<p>Your Name: {{ username }}</p>
+
+<h2>Events Handling:</h2>
+<input
+  (keyup)="onKeyUp($event)"
+  (blur)="onBlur($event)"
+  (focus)="onFocus($event)"
+  placeholder="Press Key Up"
+/>
+
+<div (mouseover)="onHover($event)" (mouseleave)="onLeave($event)" class="hover-box">
+  Mouse Hover Effect
+</div>
